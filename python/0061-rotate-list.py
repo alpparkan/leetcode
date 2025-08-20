@@ -5,6 +5,7 @@ from typing import Optional
 
     Time complexity: O(n)
     Space complexity: O(1)
+    Tags: linked-list
 
     Solution: get the length of the list and calculate the rotation point, then prepend the list with rotated part.
 """

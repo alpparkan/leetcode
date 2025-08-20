@@ -6,6 +6,9 @@ from typing import List
 
     Time complexity: O(n * m), where n is total number of rows and m is the number of elements in the last row
     Space complexity: O(n)
+    Tags: Array
+    
+    Solution: using an array
 """
 
 class Solution:

@@ -5,7 +5,8 @@ from typing import List
 
     Time complexity: O(n)
     Space complexity: O(n)
-
+    Tags: Array
+    
     Solution: 2 pass - using an additional array store counts of colors and re-assign original array in the second pass
 """
 

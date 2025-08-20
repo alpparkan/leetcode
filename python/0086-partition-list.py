@@ -1,8 +1,19 @@
+"""
+    https://leetcode.com/problems/partition-list
+    Difficuilty: Medium
+
+    Time complexity: O(?)
+    Space complexity: O(?)
+    Tags: linked-list
+
+    Solution:
+"""
+
 # Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 class Solution:
     def partition(self, head: Optional[ListNode], x: int) -> Optional[ListNode]:
         if not head or (head and head.next == None):
