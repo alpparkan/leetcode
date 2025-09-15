@@ -2,13 +2,6 @@ package main
 
 import "strconv"
 
-// Definition for a binary tree node.
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
-
 func findDuplicateSubtrees(root *TreeNode) []*TreeNode {
 	result := make([]*TreeNode, 0)
 	dfs(root, make(map[string]int), &result)
