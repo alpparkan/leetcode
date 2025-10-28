@@ -1,8 +1,10 @@
 package main
 
 /*
-	TC: O(r*c)
-	SC: O(r*c)
+https://leetcode.com/problems/surrounded-regions
+Difficulty: Medium
+TC: O(r*c)
+SC: O(r*c)
 */
 
 func solve(board [][]byte) {

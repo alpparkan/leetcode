@@ -9,28 +9,26 @@ TC: O(n)
 SC: O(n)
 */
 func isIsomorphic(s string, t string) bool {
-	mapS2T := make(map[byte]byte, 0)
-	mapT2S := make(map[byte]byte, 0)
+	sMappings := make(map[byte]byte)
+	tMappings := make(map[byte]byte)
 
 	for i := range len(s) {
-		s_ch, t_ch := s[i], t[i]
+		ch_s, ch_t := s[i], t[i]
 
-		s_ch_val, s_ch_exist := mapS2T[s_ch]
-		if s_ch_exist && s_ch_val != t_ch {
+		if mapping, exists := sMappings[ch_s]; exists && mapping != ch_t {
 			return false
 		} else {
-			mapS2T[s_ch] = t_ch
+			sMappings[ch_s] = ch_t
 		}
 
-		t_ch_val, tExist := mapT2S[t_ch]
-		if tExist && t_ch_val != s_ch {
+		if mapping, exists := tMappings[ch_t]; exists && mapping != ch_s {
 			return false
 		} else {
-			mapT2S[t_ch] = s_ch
+			tMappings[ch_t] = ch_s
 		}
 	}
-	fmt.Printf("mapS2T: %v\n", mapS2T)
-	fmt.Printf("mapT2S: %v\n", mapT2S)
+	fmt.Printf("s mappings: %v\n", sMappings)
+	fmt.Printf("t mappings: %v\n", tMappings)
 
 	return true
 }

@@ -4,9 +4,11 @@ import "math/rand"
 
 /*
 https://leetcode.com/problems/insert-delete-getrandom-o1
-Difficulty: Mediun
+Difficulty: Medium
 TC: O(1)
 SC: O(n)
+
+Here we maintain a seperate list just because to use it in the GetRandom() function. Maps are unordered data structures, so we must convert it's keys to a list everytim we want to get a random value which is an O(n) operation. In order to do the same operation at O(1) constant time we must use a seperate list.
 */
 
 type RandomizedSet struct {

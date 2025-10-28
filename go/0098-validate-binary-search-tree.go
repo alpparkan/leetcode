@@ -2,6 +2,7 @@ package main
 
 /*
 	https://leetcode.com/problems/validate-binary-search-tree
+	Difficulty: Medium
 	TC: O(n), we visit every node at most
 	SC: O(h), where call stack of recursive DFS function is the height of the tree
 */
